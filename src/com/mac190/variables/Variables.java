@@ -1,4 +1,4 @@
-/*
+package com.mac190.variables;/*
 A variables is a memory space (a name associated with that space) where data is saved.
 Each variable has a unique identifier to be able to refer to it.
 The name of a variable should not
