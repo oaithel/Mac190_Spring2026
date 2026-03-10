@@ -29,21 +29,31 @@ public class Variables {
         System.out.println("var: " + var + " the float f is; " + f);
         //Define a variable to contain the number of students in the class.
         //there are 18. Display it.
+        int numberOfStudents = 18;
+        System.out.println("there are " + numberOfStudents + " students in the class");
         //define the change you have in your pocket, you have 14 dollars and 37 cents
         //display it.
+        float changeInPocket = 14.37f;
+        System.out.println("I have $" + changeInPocket + " in my pocket");
         //add it 2 dollars and 45 cents, then display.
-
+        changeInPocket += 2.45f;
+        System.out.println("I have $" + changeInPocket + " in my pocket");
         //subtract from it 1 less than it's third. display it
-
+        changeInPocket -= (changeInPocket/3f- 1.0f);
+        System.out.println("I have $" + changeInPocket + " in my pocket");
         //define a variable to contain your name, display it
-
+        String myName = "ProfOmar";
+        System.out.println("My name is: " + myName);
         //define a variable to contain the answer to a question as y for yes and n for no.
         //the answer is yes. display it.
-
+        char answer = 'y';
+        System.out.println("The answer is: " + answer);
         //define a variable to contain the exact number of dollars in your pocket, find it and display it
-
-        //define a varianle to contain the exact number of cents in your pocket, find it and display it.
-
+        int dollarsInPocket = (int) changeInPocket; //This is type cast
+        System.out.println("I have " + dollarsInPocket + " dollar bills in my pocket");
+        //define a variable to contain the exact number of cents in your pocket, find it and display it.
+        int centsInPocket = (int)((changeInPocket - dollarsInPocket) *100);
+        System.out.println("I have " + centsInPocket + " cents in pocket");
 
     }
 
