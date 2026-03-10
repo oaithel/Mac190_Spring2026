@@ -22,6 +22,8 @@ int numberOfStudentsInTheClass; //this is a convention
 
  */
 
+import java.util.Scanner;
+
 public class Variables {
     public static void main(String[] args) {
         int var = 2;
@@ -54,6 +56,16 @@ public class Variables {
         //define a variable to contain the exact number of cents in your pocket, find it and display it.
         int centsInPocket = (int)((changeInPocket - dollarsInPocket) *100);
         System.out.println("I have " + centsInPocket + " cents in pocket");
+        //To read values from the keyboard we use Scanner object:
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        int num = sc.nextInt();
+        System.out.println("Your value is: " + num);
+        System.out.println("Enter a decimal: ");
+        double d = sc.nextDouble();
+        System.out.println("You value is: " + d);
+
+
 
     }
 
