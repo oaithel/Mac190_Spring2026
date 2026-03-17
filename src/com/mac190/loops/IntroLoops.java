@@ -84,13 +84,28 @@ public class IntroLoops {
         //read one number first
         System.out.println("Enter a number: ");
         int num = sc.nextInt();
+        int smallest = num;
+        int largest = num;
+        int sum = 0;
+        int evenCount = 0;
         while(num > 0){
-
+            sum += num;
+            if(smallest > num){
+                smallest = num;
+            }
+            if(largest < num){
+                largest = num;
+            }
+            if(num%2 == 0){
+                evenCount++;
+            }
             System.out.println("You entered a positive number");
             //read a new number
             System.out.println("Enter a number: ");
             num = sc.nextInt();
+
         }
+        System.out.println("sum : " + sum + " largest: " + largest + " smallest: " + smallest + " num evens: " + evenCount);
     }
 
 }
