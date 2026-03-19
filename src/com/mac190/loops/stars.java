@@ -49,6 +49,31 @@ i (goes through lines)  j (stars)
 
 i + j = nLines ---> j = nLines - i at lines i you need
 to display nLines - i stars
+Shape 3
+    *
+   **
+  ***
+ ****
+*****
+
+i loops through the lines      k loop spaces     j loop for stars
+0                               4                 1
+
+
+
+
+Shape 4
+*****
+ ****
+  ***
+   **
+    *
+
+
+i loops through the lines      k loop spaces     j loop for stars
+0                               0                5
+
+
  */
 public class stars {
     public static void main(String[] args) {
