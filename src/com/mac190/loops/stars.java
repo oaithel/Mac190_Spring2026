@@ -57,9 +57,16 @@ Shape 3
 *****
 
 i loops through the lines      k loop spaces     j loop for stars
-0                               4                 1
+0                               4                   1
+1                               3                   2
+2                               2                   3
+3                               1                   4
+4                               0                   5
+Express k in terms of i and nLines:
+i + k = nLines-1 ---> k = nLines - 1 - i
+At line i display nLines - 1 - i spaces
 
-
+j = i+1 ---> at line i display i+1 stars.
 
 
 Shape 4
@@ -111,5 +118,21 @@ public class stars {
             //go to next line to display the next line.
             System.out.println("");
         }
+        System.out.println("-----------Triangle Shape 3-----");
+        for(int i = 0; i < nLines; i++) {
+            //display the spaces first
+            for(int k = 0; k < nLines - i - 1; k++){
+                System.out.print(" ");
+            }
+            //Inside the loop, loop again i+1 times
+            for(int j = 0; j < i+1; j++) {
+                //display one star at a time
+                System.out.print("*");
+            }
+            //go to next line to display the next line.
+            System.out.println("");
+        }
     }
+    //TODO: HW5 the fourth shape explain how did you get the bounds for your loops.
+
 }
