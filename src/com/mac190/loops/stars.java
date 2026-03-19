@@ -40,6 +40,15 @@ Shape 2:
 **
 *
 
+i (goes through lines)  j (stars)
+0                       5
+1                       4
+2                       3
+3                       2
+4                       1
+
+i + j = nLines ---> j = nLines - i at lines i you need
+to display nLines - i stars
  */
 public class stars {
     public static void main(String[] args) {
@@ -61,6 +70,16 @@ public class stars {
         for(int i = 0; i < nLines; i++) {
             //Inside the loop, loop again lineNumber times
             for(int j = 0; j < i+1; j++) {
+                //display one star at a time
+                System.out.print("*");
+            }
+            //go to next line to display the next line.
+            System.out.println("");
+        }
+        System.out.println("-----------Triangle Shape 2-----");
+        for(int i = 0; i < nLines; i++) {
+            //Inside the loop, loop again lineNumber times
+            for(int j = 0; j < nLines-i; j++) {
                 //display one star at a time
                 System.out.print("*");
             }
