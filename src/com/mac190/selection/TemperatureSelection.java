@@ -1,6 +1,5 @@
 package com.mac190.selection;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /*
@@ -58,7 +57,7 @@ public class Temperature {
 */
 
 //Using a switch statement
-public class Temperature {
+public class TemperatureSelection {
     public static void main(String[] args) {
         System.out.println("Press C to convert into Fahrenheit\n " +
                 "Press F to convert into Celcius");
