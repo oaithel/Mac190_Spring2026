@@ -55,18 +55,33 @@ public class IntroClasses {
         myObj.increment();
         myObj.increment();
         myObj.print();
-        //create a second onject IntroClasses. Set num to 3, S to 4
-
+        //create a second object IntroClasses. Set num to 3, S to 4
+        IntroClasses secObj = new IntroClasses();
+        secObj.num = 3;
+        secObj.s = 4;
         //print it.
-
+        secObj.print();
         //increment it twice. print it.
-
+        secObj.increment();
+        secObj.increment();
+        secObj.print();
         //assign the second object to the first object.
-
+        myObj = secObj;
         //display both objects.
-
+        myObj.print();
+        secObj.print();
         //increment the first object twice.
-
+        myObj.increment();
         //display both objects. What do you notice?
+        myObj.print();
+        secObj.print();
+        //increment the second and print both
+        secObj.increment();
+        myObj.print();
+        secObj.print();
+        //Changing one both change because there is only one object and not two objects
+        //the first object was lost/destroyed when we assigned the second to the first.
+        //The first object will hve no reference to it and gets destroyed.
+
     }
 }
