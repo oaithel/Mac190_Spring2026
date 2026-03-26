@@ -13,9 +13,10 @@ public class CalcTester {
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter an expression in the form A + B: ");
             //assign the operands and the operator to the object
-            calc.first = sc.nextDouble();
-            calc.operator = sc.next().charAt(0);
-            calc.second = sc.nextDouble();
+            calc.setFirst(sc.nextDouble());
+            calc.setOperator(sc.next().charAt(0));
+            calc.setSecond(sc.nextDouble());
+            System.out.println("Calculator: " + calc.toString());
             //invoke calculate
             calc.calculate();
             //ask the use if he/she wishes to continue.
