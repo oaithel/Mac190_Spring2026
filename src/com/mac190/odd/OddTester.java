@@ -1,5 +1,6 @@
 package com.mac190.odd;
-
+//TODO: HW7 complete Odd class and test it. Write a samll paragraph outlining what
+//did you learn as new from this project.
 public class OddTester {
     public static void main(String[] args) {
         //Create an Odd object od1, assign 4 to num.
