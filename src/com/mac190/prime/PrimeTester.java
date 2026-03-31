@@ -2,6 +2,9 @@ package com.mac190.prime;
 
 public class PrimeTester {
     public static void main(String[] args) {
+        //T use a static method, use the name of the class then . method
+        System.out.println("25 is prime? " + Prime.isPrime(25));
+        System.out.println("29 is prime? " + Prime.isPrime(29));
         //create a default Prime P1, set it to 4
         //display it.
         //create a Prime P2 with 8 as input

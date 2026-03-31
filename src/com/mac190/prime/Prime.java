@@ -19,15 +19,27 @@ of p1 and a. No this here because it's a static method
 
  */
 public class Prime {
-
+    private int prime;
     static boolean isPrime(int a){
         //return true if a is prime and false if not
         //if a is less than 2 then return false
+        if(a < 2)
+            return false;
         //if a is 2 then return true
+        if(a == 2)
+            return true;
         //if a is even return false
+        if(a %2 == 0)
+            return false;
         //have a for loop going from 3 to sqrt(a) inclusive by steps of 2
+        for(int i = 3; i <= Math.sqrt(a); i += 2) {
             //if a is divisible by i, then return false
-
+            if (a % i == 0) {
+                return false;
+            }
+        }
         //at the end of the loop return true.
+        return true;
     }
+
 }
