@@ -41,23 +41,24 @@ public class Odd {
     as long as the type of the input parameters is different or the number of
     parameters is different. You cannot overload solely on the return type.
      */
-    public int add(int a){
+    public int sum(int a){
         return a + num;
     }
     //public int add(int a) is not allowed because the difference is only the return typ
-    public int add(Odd a){
+    public int sum(Odd a){
         return a.num + num;
     }
 
     //design a method sum that returns an Odd Object that is a sum of this object
     //and the input Odd object
-    public Odd sum(Odd input){
+    public Odd add(Odd input){
         //We have three Odd objects: input, this and the returned object as the sum
         Odd result = new Odd(this.num + input.num);
         return result;
     }
-    public Odd sum(int a){
-
+    public Odd add(int a){
+        Odd result = new Odd(this.num + a);
+        return result;
     }
 }
 

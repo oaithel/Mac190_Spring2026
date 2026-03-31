@@ -13,21 +13,26 @@ public class OddTester {
         od2.setNum(7);
         System.out.println("Od2: " + od2);
         //using add method show od1 added to it 6
-        int sum = od1.add(6);
+        int sum = od1.sum(6);
         System.out.println("sum: " + sum);//11
         //using add method show result of adding ad1 and od2 objects.
-        sum = od1.add(od2);
+        sum = od1.sum(od2);
         System.out.println("sum: " + sum);//12
         //Create a new Odd object with value 8 right at the beginning without using
         //the setter
         Odd od3 = new Odd(8);
         System.out.println("od3: " + od3);
         //Use sum method to add od1 and od2 to crate od4
-        Odd od4 = od1.sum(od2);
+        Odd od4 = od1.add(od2);
         System.out.println("Od4: " + od4);
         //add od1 to od2
+        od2 = od2.add(od1);
         //display both od1 and od2
-        //set od3 to (ad1 + 6) + od2 in one instruction.
+        System.out.println("od2: " + od2 + "  od1: " + od1);
+        //Using add method perform the following:
+        //od3 = (od1 + 6) + od2 in one instruction.
+        od3 = (od1.add(6)).add(od2);
+        System.out.println("od3: " + od3);//24 + 1 --> 25
 
     }
 }
