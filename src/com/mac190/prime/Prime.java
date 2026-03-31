@@ -1,5 +1,6 @@
 package com.mac190.prime;
 /*
+TODO: Finish the class at home and test it.
 Design class Prime that has the following properties:
 - a private integer memeber variable prime that is prime at all times
 - a default constructor that a sets prime to 2
