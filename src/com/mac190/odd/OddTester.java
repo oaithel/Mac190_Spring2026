@@ -25,6 +25,9 @@ public class OddTester {
         //Use sum method to add od1 and od2 to crate od4
         Odd od4 = od1.sum(od2);
         System.out.println("Od4: " + od4);
+        //add od1 to od2
+        //display both od1 and od2
+        //set od3 to (ad1 + 6) + od2 in one instruction.
 
     }
 }
