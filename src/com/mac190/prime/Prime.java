@@ -1,4 +1,7 @@
 package com.mac190.prime;
+
+import java.util.Objects;
+
 /*
 TODO: Finish the class at home and test it.
 Design class Prime that has the following properties:
@@ -43,4 +46,52 @@ public class Prime {
         return true;
     }
 
+    //constructors:
+    public Prime(){
+        prime = 2;
+    }
+    public Prime(int a){
+        //always use the setters
+        setPrime(a);
+    }
+    //setter
+    public void setPrime(int a){
+        while(!isPrime(a)){
+            a++;
+        }
+        //At the end of the loopp a is prime
+        prime = a;
+    }
+    //getter
+    public int getPrime(){
+        return prime;
+    }
+    public String toString(){
+        return "prime: " + prime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Prime prime1 = (Prime) o;
+        return this.prime == prime1.prime;
+    }
+
+    public Prime add(int a){
+        Prime res = new Prime(this.prime + a);
+        return res;
+    }
+    //Above method as static method
+    public static Prime add(Prime p, int a){
+        Prime res = new Prime(p.prime + a);
+        return res;
+    }
+    public Prime add(Prime p){
+        Prime res = new Prime(this.prime + p.prime);
+        return res;
+    }
+    public static Prime add(Prime p, Prime q){
+        Prime res = new Prime(q.prime + p.prime);
+        return res;
+    }
 }
