@@ -41,6 +41,21 @@ public class Circle {
     public void setRadius(double radius) {
         this.radius = radius;
     }
+    public double getX(){
+        return center.getX();
+    }
+    public double getY(){
+        return center.getY();
+    }
+    public void setX(double a){
+        center.setX(a);
+    }
+    public void setY(double a){
+        center.setY(a);
+    }
+    public void setXY(double a, double b){
+        center.setXY(a, b);
+    }
     public String toString(){
         return "{" + center + ", " + radius + "}";
     }
