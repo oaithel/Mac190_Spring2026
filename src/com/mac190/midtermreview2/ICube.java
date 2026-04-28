@@ -7,39 +7,28 @@ public class ICube extends Rectangle{
     private double height;
 
     public ICube(){
-        base = new Rectangle();
+        super();
         height = 0;
     }
-    public Cube(Rectangle r, double h){
-        base = new Rectangle(r);
+    public ICube(Rectangle r, double h){
+        super(r); //will call the copy constructor of Recangle
         height = h;
     }
-    public Cube(double a, double b, double h){
-        base = new Rectangle(a, b);
+    public ICube(double a, double b, double h){
+        super(a, b);
         height = h;
     }
     //copy constructor
-    public Cube(Cube c){
-        base = new Rectangle(c.getBase());
+    public ICube(ICube c){
+        super(c.getBase());
         height = c.getHeight();
     }
-    public double getLength(){
-        return base.getLength();
-    }
-    public void setLength(double a){
-        base.setLength(a);
-    }
-    public double getWidth(){
-        return base.getWidth();
-    }
-    public void setWidth(double a){
-        base.setWidth(a);
-    }
     public Rectangle getBase() {
-        return base;
-    }
+        return this;
+    } //ICube IS a Rectangle
     public void setBase(Rectangle base) {
-        this.base = base;
+        this.setLength(base.getLength());
+        this.setWidth(base.getWidth());
     }
     public double getHeight() {
         return height;
@@ -50,28 +39,25 @@ public class ICube extends Rectangle{
 
     @Override
     public String toString() {
-        return "Cube{" +
-                "base=" + base +
+        return "ICube{" +
+                "base=" + super.toString() +
                 ", height=" + height +
                 '}';
     }
-    public boolean equals(Cube c){
-        if(this.getBase().equals(c.getBase()) && this.height == c.getHeight()){
-            return true;
-        }
-        return false;
+    public boolean equals(ICube c){
+        return (super.equals(c.getBase()) && this.height == c.getHeight());
     }
     public double area(){
-        return 2.0*(this.base.area() + this.getLength()*height + this.getWidth()*height);
+        return 2.0*(super.area() + this.getLength()*height + this.getWidth()*height);
     }
     public double volume(){
-        return this.getBase().area()*this.getHeight();
+        return super.area()*this.getHeight();
     }
-    public Cube add(Cube c){
-        return new Cube(this.base.add(c.base), this.height + c.height);
+    public ICube add(ICube c){
+        return new ICube(super.add(c.getBase()), this.height + c.height);
     }
-    public static Cube add(Cube t, Cube c){
-        return new Cube(t.base.add(c.base), t.height + c.height);
+    public static ICube add(ICube t, ICube c){
+        return new ICube(t.getBase().add(c.getBase()), t.height + c.height);
     }
 
 }

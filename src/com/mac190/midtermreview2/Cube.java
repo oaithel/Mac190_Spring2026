@@ -1,7 +1,7 @@
 package com.mac190.midtermreview2;
 
 import java.util.Random;
-
+//Cube using COMPOSITION
 public class Cube {
     private Rectangle base;
     private double height;
