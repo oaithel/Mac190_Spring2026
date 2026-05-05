@@ -8,7 +8,7 @@ species, diet, color and age.
 setter/getters, toString and equals.
 a method speak() that display "don't know how to speak yet"
  */
-public class Animal {
+abstract class Animal {
     private String species, diet, color;
     private int age;
 
@@ -73,8 +73,18 @@ public class Animal {
         if (!(o instanceof Animal animal)) return false;
         return age == animal.age && Objects.equals(species, animal.species) && Objects.equals(diet, animal.diet) && Objects.equals(color, animal.color);
     }
+/*
+Very often we want to force inherited class to implement a certain
+method but we have no idea how to implement it in a base class.
+Such methods are defined as abstract in the base class.
+we use abstract key word to define them.
+If you have one abstract method in a class, the whole needs to be
+declared abstract.
+You cannot instanciate (make objects out of) an abstract.
+ */
+    //Example: I don't know how to implement method spean in Animal
+    //class but I want every inherited class to implement that method
+    //therefore speak needs to be abstract
 
-    public void speak(){
-        System.out.println("Don't know how to speak");
-    }
+    abstract void speak();
 }

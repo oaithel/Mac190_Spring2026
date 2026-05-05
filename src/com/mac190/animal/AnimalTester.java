@@ -2,7 +2,8 @@ package com.mac190.animal;
 
 public class AnimalTester {
     public static void main(String[] args) {
-        Animal A = new Animal();
+        Animal A = new Dog(); //You cannot instantiate class Animal,
+                            //it is abstract
         A.setAge(3);
         A.setDiet("Omnivore");
         A.setSpecies("Canine");

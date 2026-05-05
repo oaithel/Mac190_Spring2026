@@ -10,6 +10,11 @@ the method speak() make it display "Waf! waf!"
  */
 public class Dog extends Animal{
     String breed, name;
+    public Dog(){
+        super("Canine", "Omnivore", "N/A", 0);
+        this.breed = "N/A";
+        this.name = "N/A";
+    }
     public Dog(String breed, String name) {
         super("Canine", "Omnivore", "N/A", 0);
         this.breed = breed;
