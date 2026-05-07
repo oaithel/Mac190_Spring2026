@@ -4,9 +4,9 @@ public class VehicleTester {
     public static void main(String[] args) {
         //create a BMW
         //display it
-       // BMW yourBM = new BMW("SDFSDF131313", "X6", "Blue", 4);
-       // System.out.println("YourBM: " + yourBM);
-      /*  yourBM.moveForward();
+        BMW yourBM = new BMW("SDFSDF131313", "X6", "Blue", 4);
+        System.out.println("YourBM: " + yourBM);
+        yourBM.moveForward();
         yourBM.speedUp(60);
         yourBM.moveBackwards();
         yourBM.brake();
@@ -33,9 +33,15 @@ public class VehicleTester {
         V.moveBackwards();
         V.brake();
         System.out.println("make is: " + V.getMake());
+        //Use an interface to drive yourBMW
+        System.out.println(" --------Using interface");
+        iDrive driveIt = yourBM;
+        driveIt.brake();
+        driveIt.moveForward();
+        driveIt.speedUp(80);
+        driveIt.turnLeft(30);
+        driveIt.moveBackwards();
 
-        //Add any testing you deem necessary
 
-       */
     }
 }
