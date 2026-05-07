@@ -131,6 +131,7 @@ public class BMW extends Vehicle implements iDrive{
         if(state == State.STOPPED){
             System.out.println("Moving backwards");
             speed = 10;
+            state = State.BACKWARDS;
             return true;
         }
         System.out.println("You have to stop first");
@@ -149,6 +150,7 @@ public class BMW extends Vehicle implements iDrive{
         }
         System.out.println("Moving forward at 10 mph");
         speed = 10;
+        state = State.FORWARD;
         return true;
     }
 }
