@@ -1,6 +1,6 @@
 package com.mac190.files;
 
-import java.io.File;
+import java.io.*;
 import java.util.Scanner;
 
 /*
@@ -28,9 +28,32 @@ public class PracticeFiles {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the input file name:");
         String fileName = sc.nextLine();
-        File inFile = new File("C:\\Users\\b331-prof\\Documents\\ProfOmar\\MAC190_Spring2026\\TestDir\\"+fileName);
+        String path = "C:\\Users\\b331-prof\\Documents\\ProfOmar\\MAC190_Spring2026\\TestDir\\";
+        File inFile = new File(path+fileName);
         int indexDot = fileName.indexOf(".");
         String outFileName = fileName.substring(0,indexDot) + "_out.txt";
-        System.out.println("infile: " + fileName + " outFile: " + outFileName);
+        //OR you can this
+        //String outFileName = fileName.replace(".", "_out.");
+        if(!inFile.exists()){
+            System.exit(1);
+        }
+        try{
+            FileReader fr = new FileReader(inFile);
+            Scanner inS = new Scanner(fr);
+            FileWriter fw = new FileWriter(path+outFileName);
+            BufferedWriter bw = new BufferedWriter(fw);
+            while(inS.hasNext()){
+                int ssn = inS.nextInt();
+                String fname = inS.next();
+                String lname = inS.next();
+                double time = inS.nextDouble();
+                bw.write("F:"+fname+"\tL:"+lname + "\tT:"+time + "\tS:"+ssn+"\n");
+            }
+            inS.close();
+            bw.close();
+        }catch(IOException e){
+            System.out.println("Exception: " + e.getMessage());
+        }
+
     }
 }
