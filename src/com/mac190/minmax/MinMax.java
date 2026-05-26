@@ -28,6 +28,10 @@ the sign of a).
 
 
  */
+/*
+Modify the class to handle errors using exceptions. Use both checked and unckecked
+exceptions of your choice
+ */
 public class MinMax {
     private int min, max;
     public MinMax(){

@@ -107,29 +107,27 @@ public class BMW extends Vehicle implements iDrive{
     public void brake() {
         if(state == State.STOPPED){
             //TODO: Throw a unchecked exception handle it in the tester not here.
-            System.out.println("Already stopped");
-            return;
+            throw new RuntimeException("Already stopped");
         }
         System.out.println("Stopping ....");
         state = State.STOPPED;
     }
     @Override
-    public boolean speedUp(double sp) {
+    public boolean speedUp(double sp) throws Exception{
         if(state == State.FORWARD){
             speed = Math.min(speed + sp, 100);
             System.out.println("Speeding at " + speed + " mph");
             return true;
         }
         //TODO: throw a checked exception of your choice, handle it in the tester
-        System.out.println("we cannot speedup");
-        return false;
+        throw new Exception("we cannot speedup");
     }
     @Override
-    public boolean moveBackwards() {
+    public boolean moveBackwards() throws Exception{
         if(state == State.BACKWARDS){
             //TODO: Throw unchecked exception
-            System.out.println("Moving backwards already!");
-            return false;
+            throw new IllegalArgumentException("Moving backwards already!");
+
         }
         if(state == State.STOPPED){
             System.out.println("Moving backwards");
@@ -138,20 +136,19 @@ public class BMW extends Vehicle implements iDrive{
             return true;
         }
         //TODO: Throw a checked exception and handle it in the tester
-        System.out.println("You have to stop first");
-        return false;
+        throw new Exception("You have to stop first");
     }
 
     @Override
-    public boolean moveForward() {
+    public boolean moveForward() throws Exception{
         if(state == State.FORWARD){
             System.out.println("Already moving forward");
             return false;
         }
         if(state == State.BACKWARDS){
             //TODO: Throw a checked exception with the message and handle it in the tester
-            System.out.println("You have to stop first before moving forward");
-            return false;
+            throw new Exception("You have to stop first before moving forward");
+
         }
         System.out.println("Moving forward at 10 mph");
         speed = 10;

@@ -6,11 +6,29 @@ public class VehicleTester {
         //display it
         BMW yourBM = new BMW("SDFSDF131313", "X6", "Blue", 4);
         System.out.println("YourBM: " + yourBM);
-        yourBM.moveForward();
-        yourBM.speedUp(60);
-        yourBM.moveBackwards();
+        try {
+            yourBM.moveBackwards();
+            yourBM.moveForward();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+
+        try {
+            yourBM.speedUp(60);
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+        try {
+            yourBM.moveBackwards();
+        } catch (Exception e) {
+        System.out.println("Exception: " + e.getMessage());
+    }
         yourBM.brake();
+        try{
         yourBM.moveBackwards();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
         yourBM.turnRight(30);
 
         //create a Tesla object
@@ -25,22 +43,38 @@ public class VehicleTester {
         T.turnRight(30);
         //use a reference Vehicle V to drive the BMW. Increase the speed ...
         Vehicle V = (Vehicle) yourBM;
+        try{
         V.moveBackwards();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
         System.out.println("The speed is: " + V.getSpeed());
         //Move the referrence V from the BMW to the Tesla, drive it. Try
         //methods that should display error
         V = (Vehicle) T;
-        V.moveBackwards();
+        try {
+            V.moveBackwards();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
         V.brake();
         System.out.println("make is: " + V.getMake());
         //Use an interface to drive yourBMW
         System.out.println(" --------Using interface");
         iDrive driveIt = yourBM;
         driveIt.brake();
-        driveIt.moveForward();
-        driveIt.speedUp(80);
+        try {
+            driveIt.moveForward();
+            driveIt.speedUp(80);
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
         driveIt.turnLeft(30);
+        try{
         driveIt.moveBackwards();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
 
 
     }
