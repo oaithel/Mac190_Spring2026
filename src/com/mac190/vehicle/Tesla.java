@@ -21,6 +21,7 @@ or the input (if the input is less than 10 m/h) and display the speed, limit the
 speedUp only increases if it is movingForward.
 Test your class.
 */
+//TODO: Use exceptions for error handling as in BMW class.
 public class Tesla extends Vehicle{
     private String model, color;
     private int numberSeats;

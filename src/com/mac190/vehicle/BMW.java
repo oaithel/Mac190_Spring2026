@@ -106,6 +106,7 @@ public class BMW extends Vehicle implements iDrive{
     @Override
     public void brake() {
         if(state == State.STOPPED){
+            //TODO: Throw a unchecked exception handle it in the tester not here.
             System.out.println("Already stopped");
             return;
         }
@@ -119,12 +120,14 @@ public class BMW extends Vehicle implements iDrive{
             System.out.println("Speeding at " + speed + " mph");
             return true;
         }
+        //TODO: throw a checked exception of your choice, handle it in the tester
         System.out.println("we cannot speedup");
         return false;
     }
     @Override
     public boolean moveBackwards() {
         if(state == State.BACKWARDS){
+            //TODO: Throw unchecked exception
             System.out.println("Moving backwards already!");
             return false;
         }
@@ -134,6 +137,7 @@ public class BMW extends Vehicle implements iDrive{
             state = State.BACKWARDS;
             return true;
         }
+        //TODO: Throw a checked exception and handle it in the tester
         System.out.println("You have to stop first");
         return false;
     }
@@ -145,6 +149,7 @@ public class BMW extends Vehicle implements iDrive{
             return false;
         }
         if(state == State.BACKWARDS){
+            //TODO: Throw a checked exception with the message and handle it in the tester
             System.out.println("You have to stop first before moving forward");
             return false;
         }
