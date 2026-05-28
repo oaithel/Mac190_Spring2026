@@ -66,9 +66,13 @@ public class IntroStrings {
 
         /*
         Example: input:
-        Hi there. how are you? are you ok? tel me about it. have fun.
+        Hi there.    how are you? are you ok? tel me about it. have fun.
         Out put should be
         Hi there. How are you? Are you ok? Tel me about it. Have fun.
          */
+        if(Character.isLetter(str2.charAt(index))){
+            str2 = str2.substring(0, index) + Character.toUpperCase(str2.charAt(index)) +
+                    str2.substring(index+1);
+        }
     }
 }
