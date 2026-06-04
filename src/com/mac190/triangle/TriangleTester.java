@@ -31,5 +31,23 @@ public class TriangleTester {
         Addable A2 = A1.add(T2);
         System.out.println("A2: " + A2);
 
+        //make a Pyramid out of T1 and 30
+        Pyramid P1 = new Pyramid(T1, 30);
+        System.out.println("P1: " + P1);
+        //create a Pyramid P2 that is the sum of T1 and T2 and pyramidHeight
+        // of 10 in one line of code.
+        Pyramid P2 = new Pyramid((Triangle) T1.add((Shape)T2), 10);
+        System.out.println("P2: " + P2);
+        A1 = P2;
+        A1.
+        //Here no problem because a Pyramid IS a Triangle
+        Triangle T3 = (Triangle)(T1.add((Shape)P1));
+        System.out.println("T3: " + T3);
+        //Here an exception is going to be thrown because a Triangle
+        //i not a Pyramid
+        Pyramid P3 = (Pyramid) (P1.add((Shape)T1));
+        System.out.println("P3: " + P3);
+
+
     }
 }
