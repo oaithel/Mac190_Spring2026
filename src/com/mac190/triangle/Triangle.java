@@ -67,7 +67,7 @@ public class Triangle extends Shape implements Addable{
         if(! (a instanceof Triangle t)){
             throw new ClassCastException("input needs to be a Triangle");
         }
-        return Triangle.add(this, t);
+        return new Triangle(this.base + t.getBase(), (this.getHeight() + t.getHeight())/2.0);
     }
 
     @Override
@@ -80,9 +80,6 @@ public class Triangle extends Shape implements Addable{
         if(!(s instanceof Triangle t)){
             throw new ClassCastException("input is not a Triangle");
         }
-        return Triangle.add(this, t);
-    }
-    public static Triangle add(Triangle t, Triangle s){
-        return new Triangle(t.base + s.getBase(), (t.getHeight() + s.getHeight())/2.0);
+        return new Triangle(this.base + t.getBase(), (this.getHeight() + t.getHeight())/2.0);
     }
 }
