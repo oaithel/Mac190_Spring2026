@@ -1,5 +1,5 @@
 package com.mac190.reviewfinal;
 
 public interface Addable {
-    Addable add(Addable a);
+    Addable add(Addable a) throws BatteryException;
 }

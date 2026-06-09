@@ -39,14 +39,7 @@ public class TriangleTester {
         Pyramid P2 = new Pyramid((Triangle) T1.add((Shape)T2), 10);
         System.out.println("P2: " + P2);
         A1 = P2;
-        A1.
-        //Here no problem because a Pyramid IS a Triangle
-        Triangle T3 = (Triangle)(T1.add((Shape)P1));
-        System.out.println("T3: " + T3);
-        //Here an exception is going to be thrown because a Triangle
-        //i not a Pyramid
-        Pyramid P3 = (Pyramid) (P1.add((Shape)T1));
-        System.out.println("P3: " + P3);
+
 
 
     }
