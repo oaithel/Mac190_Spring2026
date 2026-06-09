@@ -74,7 +74,6 @@ public class Triangle extends Shape implements Addable{
     public double area() {
         return base*this.getHeight();
     }
-
     @Override
     public Shape add(Shape s) {
         if(!(s instanceof Triangle t)){
